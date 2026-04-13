@@ -98,26 +98,13 @@ methodology was corrected.
    separate row. No slash notation ("100/125*"). The Expanded Subcategory
    List from Category1_Step_0_Output_LOCKED.md defines the exact 16 rows.
 
-2. **Correct Pb values.** Karen has verified the Lead limits:
-
-| Subcategory | Pb (ppb) |
-|---|---|
-| Infant formula, powder (non-soy) | 5 |
-| Infant formula, powder (soy-based) | 5 |
-| Infant formula, RTF liquid (non-soy) | 5 |
-| Infant formula, RTF liquid (soy-based) | 5 |
-| Baby cereals, dry (non-rice) | 5 |
-| Baby cereals, dry (rice-based) | 10 |
-| Fruit purées (general) | 2 |
-| Non-root vegetable purées | 3 |
-| Root-vegetable purées | 5 |
-| Meat and poultry purées | 2 |
-| Fish-containing baby foods | 5 |
-| Mixed meals, non-rice | 5 |
-| Mixed meals, rice-containing | 10 |
-| Fruit juice (not canned) | 5 |
-| Teething & snacks (non-rice) | 5 |
-| Teething & snacks (rice-based) | 10 |
+2. **All limit values must be recalculated.** No previously calculated
+   limits (including Lead) should be treated as final. The methodology
+   changed significantly on April 13, 2026 — the old publication ladder
+   was retired, T was eliminated, rounding rules changed, and the
+   contaminated-platform formula was replaced. All values across all 8
+   metals must be derived fresh using the v5.0 dual-percentile model
+   with the confidence ladder and simplified rounding.
 
 3. **Per-metal standards table columns must be:**
    - Category (subcategory name)

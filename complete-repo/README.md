@@ -120,32 +120,34 @@ A password-protected Standards Briefing generator is live at:
 
 Request the password from Karen. This tool takes JSON input and renders formatted Standards Briefing documents.
 
+**Sample JSON (`Category1_Sample_Output_INACCURATE.json`):**
+This JSON file is included in the repo so you can load it into the standards generator and see what the output is *supposed to look like structurally.* The generator will render a full Standards Briefing from it. **The limit values in this file are wrong** — they were produced in March before the methodology was corrected. The other 7 metals besides Pb were never validated. Later iterations using the Inngest pipeline produced better numbers but broke the document structure (missing sections, wrong formatting, incomplete references).
+
+**What this March file gets RIGHT (use as your structural reference):**
+- Table of Contents present and correct
+- Statement of Purpose present and correct
+- Anti-Circumvention & Integrity section present with all 6 moves
+- Notes column discusses achievability for each subcategory
+- Separate EU/EEA and US FDA reference columns in per-metal tables
+- Product Categories visual layout correct
+- Per-metal sections in correct order with all 6 subsections each
+- Toxicology sections, non-compliant product tables, and remediation tables all present
+- References section present
+
+**What this March file gets WRONG (must be corrected in new output):**
+- The ppb limit values are inaccurate across all metals
+- Only 10 rows instead of 16 (contamination platform splits not fully expanded)
+- Slash notation still present in master summary ("100/125*", "500/600*")
+- References section is incomplete — the Inngest pipeline was not returning research papers properly
+- Some Notes column text is generic rather than citing specific occurrence data
+
+The corrected output must have 16 rows (per Category1_Step_0_Output_LOCKED.md), accurate values from the v5.0 dual-percentile methodology, no slash notation, and complete references.
+
 ---
 
-## Verified Lead (Pb) Limits — Category 1 (Infant & Child Foods)
+## Limit Values
 
-Use these to validate pipeline output. These are the correct numbers (ppb):
-
-| Subcategory | Pb Limit (ppb) |
-|---|---|
-| Infant formula, powder (non-soy) | 5 |
-| Infant formula, powder (soy-based) | 5 |
-| Infant formula, RTF liquid (non-soy) | 5 |
-| Infant formula, RTF liquid (soy-based) | 5 |
-| Baby cereals, dry (non-rice) | 5 |
-| Baby cereals, dry (rice-based) | 10 |
-| Fruit purées (general) | 2 |
-| Non-root vegetable purées | 3 |
-| Root-vegetable purées | 5 |
-| Meat and poultry purées | 2 |
-| Fish-containing baby foods | 5 |
-| Mixed meals, non-rice | 5 |
-| Mixed meals, rice-containing | 10 |
-| Fruit juice (not canned) | 5 |
-| Teething & snacks (non-rice) | 5 |
-| Teething & snacks (rice-based) | 10 |
-
-If the pipeline produces different Pb values, the formula application has a bug.
+**All values must be recalculated under the v5.0 dual-percentile methodology before publication.** No previously calculated limits (including Lead) should be treated as final. The methodology changed significantly on April 13, 2026 — the old publication ladder was retired, the tolerance factor (T) was eliminated, rounding rules changed from always-down to standard rounding, and the contaminated-platform formula was replaced entirely. Any values produced under the previous methodology (v4.x) must be re-derived.
 
 ---
 
